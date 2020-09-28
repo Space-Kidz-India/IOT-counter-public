@@ -2,7 +2,6 @@ String data = "";
 char temp = ' ';
 int current_val=0;
 int prev_inx = 0;
-int current_inx = 0;
 int parsed_data[10];
 
 void setup() {
@@ -26,6 +25,8 @@ void loop() {
         current_val++;
       }    
     }
+    prev_inx = 0;
+    current_val=0;
     //end parser
     //data array = parsed_data[]
     for(int i=0; i<10; i++){
