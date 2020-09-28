@@ -33,9 +33,7 @@ void loop() {
     Serial.print(i+1);
     Serial.print(": ");
     Serial.println(parsed_data[i]);
+    }
   }
   //while end
-
-}
-
 }
