@@ -3,6 +3,7 @@ char temp = ' ';
 int current_val=0;
 int prev_inx = 0;
 int parsed_data[10];
+String parsed_data_string[10];
 
 void setup() {
 Serial.begin(9600);
@@ -18,10 +19,12 @@ void loop() {
       temp = data[i];
       if(temp == ','){
         parsed_data[current_val]=data.substring(prev_inx, i).toInt();
+        parsed_data_string[current_val]=data.substring(prev_inx, i);
         current_val++;
         prev_inx = i+1;
       }else if(i==(data.length()-1)){
         parsed_data[current_val]=data.substring(prev_inx, i+1).toInt();
+        parsed_data_string[current_val]=data.substring(prev_inx, i+1);
         current_val++;
       }    
     }
@@ -33,7 +36,7 @@ void loop() {
     Serial.print("Channel ");
     Serial.print(i+1);
     Serial.print(": ");
-    Serial.println(parsed_data[i]);
+    Serial.println(parsed_data_string[i]);
     }
   }
   //while end
