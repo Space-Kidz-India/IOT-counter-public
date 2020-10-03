@@ -69,7 +69,7 @@ if ( !client.connected() )
     Serial.print("Channel ");
     Serial.print(i+1);
     Serial.print(": ");
-    Serial.println(parsed_data_string[i]);
+    Serial.println(parsed_data[i]);
     }
      payload = "{";
   for(int i=0; i<10; i++){
