@@ -45,7 +45,7 @@ if ( !client.connected() )
   
   //While start
   while (Serial.available() > 0 ) {
-    data = Serial.readString();
+    data = Serial.readStringUntil('\n');
     Serial.println(data);
     //parser
     for(int i=0; i<data.length(); i++){
